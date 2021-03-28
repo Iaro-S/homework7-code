@@ -18,16 +18,7 @@ public class Person {
     }
 
     int getAge() {
-<<<<<<< HEAD
-        if (age < 0) {
-            this.age = 0;
-        } else {
-            this.age = age;
-        }
-        return age;
-=======
         return age < 0 ? 0 : age;
->>>>>>> f6c77b7 (Vrs 1.0)
     }
 
     String getName() {
