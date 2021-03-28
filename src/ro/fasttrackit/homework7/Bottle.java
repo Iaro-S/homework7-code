@@ -12,6 +12,19 @@ public class Bottle {
         this.open = false;
     }
 
+    public int drinkLiquid(int drunk) {
+        if (this.getAvailable() > 0) {
+            int newAvailable = this.getAvailable() - drunk;
+            if (newAvailable > 0) {
+                return newAvailable;
+            } else {
+                return 0;
+            }
+        } else {
+            return 0;
+        }
+    }
+
     public boolean closeBottle() {
         return open = false;
     }
