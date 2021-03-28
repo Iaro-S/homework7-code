@@ -1,7 +1,6 @@
 package ro.fasttrackit.homework7;
 
 public class Person {
-    public boolean getAge;
     private int age;
     private String name;
     private boolean married;
