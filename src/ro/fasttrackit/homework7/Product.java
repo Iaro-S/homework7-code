@@ -6,16 +6,16 @@ public class Product {
     public int quantity;
     public String category;
 
-    public Product(String name,double price,int quantity,String category) {
+
+    public Product(String name, double price, int quantity, String category) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
         this.category = category;
     }
 
-
     double getPrice() {
-        return price;
+        return price < 0 ? 0 : price;
     }
 
     int getQuantity() {
@@ -31,10 +31,10 @@ public class Product {
     }
 
     boolean hasStock() {
-        if (quantity > 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return quantity > 0;
+    }
+
+    boolean isCategory(String category) {
+        return this.category.contains(category);
     }
 }
