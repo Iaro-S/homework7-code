@@ -14,5 +14,6 @@ public class Main {
         System.out.println(secondPerson.getName() + "," + secondPerson.getAge() + "," + secondPerson.getMarried());
         Person thirdPerson = new Person("Cristina", -10, false);
         System.out.println(thirdPerson.getName() + "," + thirdPerson.getAge() + "," + thirdPerson.getMarried());
+
     }
 }
