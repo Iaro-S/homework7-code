@@ -50,6 +50,7 @@ public class Bottle {
 
     int getCapacity() {
         if (capacity < 1) {
+            System.out.println("Bottle capacity must be bigger then 0");
             return 1;
         } else {
             return capacity;
@@ -59,7 +60,6 @@ public class Bottle {
     int getAvailable() {
         if (this.available >= 0) {
             if (this.capacity <= this.available) {
-                System.out.println("Bottle capacity must be bigger then 0");
                 return getCapacity();
             } else {
                 return this.available;
