@@ -1,6 +1,6 @@
 package ro.fasttrackit.homework7;
 
-public class Main {
+public class MainPerson {
     public static void main(String[] args) {
         Person myPerson = new Person("Andrei", 37, true);
 

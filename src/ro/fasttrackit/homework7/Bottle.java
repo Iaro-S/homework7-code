@@ -12,15 +12,16 @@ public class Bottle {
         this.open = false;
     }
 
-    public int drinkLiquid(int drunk) {
+    public int drinkLiquid(int drink) {
         if (this.getAvailable() > 0) {
-            int newAvailable = this.getAvailable() - drunk;
+            int newAvailable = this.getAvailable() - drink;
             if (newAvailable > 0) {
                 return newAvailable;
             } else {
                 return 0;
             }
         } else {
+            System.out.println("there's not enough liquid");
             return 0;
         }
     }
@@ -31,11 +32,12 @@ public class Bottle {
 
     public boolean openBottle() {
         if (open) {
-            System.out.println("Sticla inchisa, nu se poate bea");
+            System.out.println("you can't drink from a closed bottle");
+            return false;
         } else {
             this.open = true;
+            return true;
         }
-        return false;
     }
 
     public boolean isOpen() {
@@ -43,11 +45,11 @@ public class Bottle {
     }
 
     boolean moreThen() {
-        return this.capacity / 2 < this.available;
+        return capacity / 2 < available;
     }
 
     int getCapacity() {
-        return this.capacity;
+        return capacity;
     }
 
     int getAvailable() {
