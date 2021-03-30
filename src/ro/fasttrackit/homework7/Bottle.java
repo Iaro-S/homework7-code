@@ -49,13 +49,18 @@ public class Bottle {
     }
 
     int getCapacity() {
-        return capacity;
+        if (capacity < 1) {
+            return 1;
+        } else {
+            return capacity;
+        }
     }
 
     int getAvailable() {
         if (this.available >= 0) {
             if (this.capacity <= this.available) {
-                return this.capacity;
+                System.out.println("Bottle capacity must be bigger then 0");
+                return getCapacity();
             } else {
                 return this.available;
             }

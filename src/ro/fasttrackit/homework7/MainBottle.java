@@ -2,7 +2,7 @@ package ro.fasttrackit.homework7;
 
 public class MainBottle {
     public static void main(String[] args) {
-        Bottle myBottle = new Bottle(500, 300, false);
+        Bottle myBottle = new Bottle(-500, 300, false);
 
         System.out.println(myBottle.getCapacity());
         System.out.println(myBottle.moreThen());
