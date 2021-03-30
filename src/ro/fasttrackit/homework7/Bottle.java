@@ -70,16 +70,11 @@ public class Bottle {
     }
 
     int emptyCapacity() {
-        if (this.available > 0) {
-            int empty = this.capacity - this.available;
-
-            if (empty > 0) {
-                return empty;
-            } else {
-                return 0;
-            }
+        if (this.available <= this.capacity) {
+            int empty = this.capacity - this.getAvailable();
+            return empty;
         } else {
-            return this.capacity;
+            return 0;
         }
     }
 }
