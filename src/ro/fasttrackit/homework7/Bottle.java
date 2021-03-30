@@ -58,14 +58,10 @@ public class Bottle {
     }
 
     int getAvailable() {
-        if (this.available >= 0) {
-            if (this.capacity <= this.available) {
-                return getCapacity();
-            } else {
-                return this.available;
-            }
-        } else {
+        if (this.available < 0) {
             return 0;
+        } else {
+            return available > capacity ? capacity : available;
         }
     }
 
