@@ -5,7 +5,7 @@ public class Bottle {
     private int available;
     private boolean open;
 
-    public Bottle(int capacity, int available, boolean open) {
+    Bottle(int capacity, int available, boolean open) {
 
         this.capacity = capacity;
         this.available = available;
