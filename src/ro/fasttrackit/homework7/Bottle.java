@@ -61,7 +61,7 @@ public class Bottle {
         if (this.available < 0) {
             return 0;
         } else {
-            return available > capacity ? Vcapacity : available;
+            return available > capacity ? capacity : available;
         }
     }
 

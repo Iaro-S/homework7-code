@@ -9,17 +9,17 @@ public class MainProduct {
         System.out.println(myProduct.getQuantity());
         System.out.println(myProduct.getCategory());
         System.out.println(myProduct.hasStock());
-        System.out.println(myProduct.isCategory("categ1"));
+        System.out.println(myProduct.isCategory("categ3"));
 
         Product first = new Product("Product1", 8.54, 10, "categ1");
         System.out.println("\n" + first.getName() + ", " + first.getPrice() + ", " + first.getQuantity() + ", "
                 + first.hasStock() + ", " + first.isCategory("categ3"));
         Product second = new Product("Product2", 23.50, 17, "categ2");
         System.out.println(second.getName() + ", " + second.getPrice() + ", " + second.getQuantity() + ", "
-                + second.hasStock() + ", " + second.isCategory("categ1"));
+                + second.hasStock() + ", " + second.isCategory("categ2"));
         Product third = new Product("Product3", -10, -15, "categ3");
         System.out.println(third.getName() + ", " + third.getPrice() + ", " + third.getQuantity() + ", "
-                + third.hasStock() + ", " + third.isCategory("categ1"));
+                + third.hasStock() + ", " + third.isCategory("categ3"));
 
     }
 }

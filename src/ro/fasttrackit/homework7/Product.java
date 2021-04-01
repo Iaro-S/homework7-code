@@ -31,10 +31,11 @@ public class Product {
     }
 
     boolean hasStock() {
+
         return quantity > 0;
     }
 
     boolean isCategory(String category) {
-        return this.category.contains(category);
+        return this.category.equalsIgnoreCase(category);
     }
 }
